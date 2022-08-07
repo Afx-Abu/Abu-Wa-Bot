@@ -1,0 +1,86 @@
+{
+	"name": "Abu-Wa-Bot",
+	"description": "User Bot .",
+	"keywords": [
+		"whatsapp",
+		"bot"
+	],
+	"repository": "https://github.com/Afx-Abu/Abu-Wa-Bot",
+	"stack": "container",
+    "env": { 
+        "HANDLERS": {
+            "description": "Prefix of commands. Can be also false",
+            "required": true,
+            "value":"false"
+        },
+        "ANTILINK_WARN": {
+            "description": "Groups for antilink (JIDS)",
+            "required": false,
+            "value":"jid,jid"
+        },
+        "READ_MESSAGES": {
+            "description": "Bot will read all messages. Can be also false",
+            "required": true,
+            "value":"false"
+        },
+        "READ_COMMAND": {
+            "description": "Bot will read all commands (blue tick). Can be also false",
+            "required": true,
+            "value":"true"
+        },
+       "HEROKU_API_KEY": {
+            "description": "For updating bot and setting vars remotely",
+            "required": true,
+            "value":""
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Exact name which you gave at the top",
+            "required": true,
+            "value":""
+        },
+        "STICKER_DATA": {
+            "description": "Name of stickers created using bot. Can also split using ;",
+            "required": true,
+            "value":"Abu°♥️"
+        },
+        "CHATBOT": {
+            "description": "AI chatbot",
+            "required": true,
+            "value":"off"
+        },
+        "BOT_NAME": {
+            "description": "Name of AI chatbot",
+            "required": true,
+            "value":"Abu"
+        },
+        "AUDIO_DATA": {
+            "description": "Name of audio (take) name;name;image(url)",
+            "required": true,
+            "value":"ᴀʙᴜ;ᴜsᴇʀ ʙᴏᴛ;https://i.imgur.com/bjlbGCZ.jpg"
+        },
+        "SUDO": {
+            "description": "These numbers can control your bot. seperate with commas",
+            "required": false,
+            "value":"917025994178"
+        },
+        "ALIVE": {
+            "description": "Alive message {image/link}, {sender} can also be used",
+            "required": false,
+            "value":"{pp} ʙᴏᴛ ʀᴜɴɴɪɴɢ ᴛɪᴍᴇ {uptime}\n ᴜsᴇʀ:{sender}"
+        },
+       "SESSION": {
+            "description": "Your MD session",
+            "required": true
+             
+        }
+    },
+    "addons": [{
+      "plan": "heroku-postgresql"
+    }],
+    "buildpacks": [{
+      "url": "heroku-community/apt"
+      },
+      {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+      }]
+  }
